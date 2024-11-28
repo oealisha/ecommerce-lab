@@ -40,6 +40,30 @@ $ python market.py #
 $ gunicorn --workers 9 --threads 2 --bind 0.0.0.0:5001 market:app
 $ ps aux | grep gunicorn
 
+<!-- install database -->
+``$ pip install flask-sqlalchemy``
+
+<!-- Create database -->
+```python shell
+>>> from market import app, db
+
+>>> with app.app_context():
+         db.create_all()
+```
+
+<!-- Insert data in database>
+shell
+>>> from market import app, db, Item
+>>> with app.app_context():
+...    new_item = Item(name='Test Product', price=100, barcode='123456789012', description='A test item')
+...    db.session.add(new_item)
+...    db.session.commit()
+...    item = Item.query.first()
+...    print(item.name, item.price)
+... 
+Test Product 100
+```
+
 
 
 <!-- Check Docker -->
