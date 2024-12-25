@@ -64,7 +64,16 @@ shell
 Test Product 100
 ```
 
+<!-- Enter Flask Shell -->
+```shell
+% export FLASK_APP=run.py
+% flask shell            
 
+Python 3.11.0 (main, Jul 10 2023, 21:47:43) [Clang 14.0.3 (clang-1403.0.22.14.1)] on darwin
+App: market
+Instance: path_to_/E-commerce/ecommerce-lab/instance
+>>> 
+```
 
 <!-- Check Docker -->
 ```shell
@@ -94,5 +103,5 @@ docker rm flask_app_container
 
 # References
 1. https://www.youtube.com/watch?v=Qr4QMBUPxWo&t=555s
-2. https://github.com/jimdevops19/codesnippets/tree/main/Flask%20Full%20Series
+2. https://github.com/jimdevops19/FlaskSeries
 
